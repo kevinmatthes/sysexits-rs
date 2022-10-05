@@ -4,8 +4,6 @@
 # Copyright (C) 2022 Shun Sakai and Contributors
 #
 
-set positional-arguments
-
 alias all := default
 alias lint := clippy
 
@@ -46,4 +44,4 @@ default: build
 
 # Prepare the version increment
 @new-version version part:
-    bump2version --new-version $1 $2
+    bump2version --new-version {{version}} {{part}}
