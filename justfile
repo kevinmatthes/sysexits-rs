@@ -4,6 +4,8 @@
 # Copyright (C) 2022 Shun Sakai and Contributors
 #
 
+set positional-arguments
+
 alias all := default
 alias lint := clippy
 
@@ -41,3 +43,7 @@ default: build
 # Run the formatter for the README
 @fmt-readme:
     npx prettier -w README.md
+
+# Prepare the version increment
+@new-version:
+    bump2version --new-version $1 $2
