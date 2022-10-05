@@ -45,5 +45,5 @@ default: build
     npx prettier -w README.md
 
 # Prepare the version increment
-@new-version:
+@new-version version part:
     bump2version --new-version $1 $2
